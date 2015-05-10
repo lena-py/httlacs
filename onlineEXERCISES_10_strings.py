@@ -491,28 +491,3 @@ Hint: Whenever you talk about things wrapping around its a good idea to think of
 #     return new_word
 #
 # print(rot13("no p"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
