@@ -387,33 +387,110 @@ Write a function that removes the first occurrence of a string from another stri
 Write a function that removes all occurrences of a string from another string.
 """
 
-# not finished.  need to generalize.  only removes the first two occurrences
-
-def remove_string(mystring, mysubstring):
-    # to_remove = ""
-    if mystring.find(mysubstring) == -1:
-        to_remove = mystring
-    else:
-        a = mystring.find(mysubstring)
-        to_remove = mystring[0:a] + mystring[a+len(mysubstring):]
-    if to_remove.find(mysubstring) == -1:
-        return to_remove
-    else:
-        a = to_remove.find(mysubstring)
-        to_remove = to_remove[:a] + to_remove[a+len(mysubstring):]
-    return to_remove
-
-print(remove_string("Mississippi", "ss"))
+#
+# def remove_string(mystring, mysubstring):
+#     while mystring.find(mysubstring) != -1 and mysubstring != "":
+#         idx = mystring.find(mysubstring)
+#         mystring = mystring[:idx] + mystring[idx+len(mysubstring):]
+#
+#     return mystring
+#
+# print(remove_string("Mississippi", "iss"))
 
 
+"""
+Write a function that implements a substitution cipher.
+In a substitution cipher one letter is substituted for another to garble the message.
+For example A -> Q, B -> T, C -> G etc.
+your function should take two parameters,
+the message you want to encrypt,
+and a string that represents the mapping of the 26 letters in the alphabet.
+Your function should return a string that is the encrypted version of the message.
+The function calls both code and decode the message
+"""
+# import string
+#
+#
+# def cipher(message, key1, key2):
+#     idx = 0
+#     mystring = ""
+#     while idx < len(message):
+#         # searches the key1 alphabet for the current letter in the code to be converted
+#         # and returns the index of that letter
+#         idx_cipher = (key1.find(message[idx]))
+#         # for spaces in the message
+#         if idx_cipher == -1:
+#             mystring += " "
+#         # take the index from above and find the corresponding letter in the key2 alphabet
+#         # increment the string by that letter
+#         else:
+#             running = key2[idx_cipher]
+#             mystring += running
+#         idx += 1
+#     return mystring
+#
+# alpha = "bcdefghijklmnopqrstuvwxyzaBCDEFGHIJKLMNOPQRSTUVWXYZA"
+# para = "This code does not work for anything but spaces"
+# real_alpha = string.ascii_letters
+#
+# coded_message = cipher(para, real_alpha, alpha)
+# print(coded_message)
+#
+# decoded_message = cipher(coded_message, alpha, real_alpha)
+# print(decoded_message)
 
 
+"""
+Write a function called removeDups
+that takes a string and creates a new string
+by only adding those characters that are not already present.
+In other words, there will never be a duplicate letter added to the new string.
+"""
+
+#
+# def remove_dups(string):
+#     b = ""
+#     idx = 0
+#     for char in string:
+#         if b.find(string[idx]) == -1:
+#             b += string[idx]
+#         idx += 1
+#     return b
+#
+# a = "sstrinnggggg"
+# print(remove_dups(a))
 
 
-
-
-
-
+"""
+Write a function called rot13
+that uses the Caesar cipher to encrypt a message.
+The Caesar cipher works like a substitution cipher
+but each character is replaced by the character 13 characters to ‘its right’ in the alphabet.
+So for example the letter a becomes the letter n.
+If a letter is past the middle of the alphabet then the counting wraps around to the letter a again,
+so n becomes a, o becomes b and so on.
+Hint: Whenever you talk about things wrapping around its a good idea to think of modulo arithmetic.
+"""
+#
+# import string
+#
+#
+# def rot13(word):
+#     new_word = ""
+#     strng = string.ascii_lowercase
+#     for i in range(len(word)):
+#         a = strng.find(word[i])
+#         if word[i] == " ":
+#             new_word += " "
+#         else:
+#             if a < 13:
+#                 index = a + 13
+#             else:
+#                 index = a - 13          # book's method was to use (a+13) % 26
+#             new_word += strng[index]
+#     return new_word
+#
+# print(rot13("no p"))
 
 
 
