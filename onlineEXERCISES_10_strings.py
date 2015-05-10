@@ -366,6 +366,50 @@ that counts how many times a substring occurs in a string.
 # print(count("Mississippi", "issi"))
 
 
+"""
+Write a function that removes the first occurrence of a string from another string.
+"""
+
+
+# def remove_string(mystring, mysubstring):
+#     # to_remove = ""
+#     if mystring.find(mysubstring) == -1:
+#         to_remove = mystring
+#     else:
+#         a = mystring.find(mysubstring)
+#         to_remove = mystring[0:a] + mystring[a+len(mysubstring):]
+#     return to_remove
+#
+# print(remove_string("Mississippi", "M"))
+
+
+"""
+Write a function that removes all occurrences of a string from another string.
+"""
+
+# not finished.  need to generalize.  only removes the first two occurrences
+
+def remove_string(mystring, mysubstring):
+    # to_remove = ""
+    if mystring.find(mysubstring) == -1:
+        to_remove = mystring
+    else:
+        a = mystring.find(mysubstring)
+        to_remove = mystring[0:a] + mystring[a+len(mysubstring):]
+    if to_remove.find(mysubstring) == -1:
+        return to_remove
+    else:
+        a = to_remove.find(mysubstring)
+        to_remove = to_remove[:a] + to_remove[a+len(mysubstring):]
+    return to_remove
+
+print(remove_string("Mississippi", "ss"))
+
+
+
+
+
+
 
 
 
