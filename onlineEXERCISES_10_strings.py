@@ -243,13 +243,155 @@ Your text contains 243 alphabetic characters, of which 109 (44.8%) are 'e'.
 """
 Print out a neatly formatted multiplication table, up to 12 x 12.
 """
-mult = 1
+# mult = 1
+#
+# while mult < 13:
+#     for i in range(1, 13):
+#         print(i*mult, "\t", end=" ")
+#     mult += 1
+#     print("\n")
 
-while mult < 13:
-    for i in range(1, 13):
-        print(i*mult, "\t", end=" ")
-    mult += 1
-    print("\n")
+"""
+Write a function that will return the number of digits in an integer.
+"""
+# import string
+#
+#
+# def num_ints(anyint):
+#     found = 0
+#     for i in anyint:
+#         if i in string.digits:
+#             found += 1
+#     return found
+#
+# print(num_ints(input("enter an integer\n")))
+
+
+"""
+Write a function that reverses its string argument.
+"""
+
+
+# def reverse(any_string):
+#     backwards = ""
+#     for achar in range(len(any_string)-1, -1, -1):
+#         backwards += any_string[achar]
+#     return backwards
+
+# print(reverse(input("enter a string\n")))
+
+
+"""
+Using the last function, write a new function that mirrors its argument.
+good mirrored == gooddoog
+"""
+
+
+# def mirror(any_string):
+#     return any_string + reverse(any_string)
+#
+#
+# print(mirror("Python"))
+
+
+"""
+Write a function that removes all occurrences of a given letter from a string
+"""
+
+
+# def remove_vowels(anystring, anyletter):
+#     new_word = ""
+#     for i in anystring:
+#         if i != anyletter:
+#             new_word += i
+#     return new_word
+#
+# print(remove_vowels("Mississippi", "i"))
+
+
+"""
+Write a function that recognizes palindromes.
+(Hint: use your reverse function to make this easy!).
+"""
+
+
+# def reverse(any_string):
+#     backwards = ""
+#     for achar in range(len(any_string)-1, -1, -1):
+#         backwards += any_string[achar]
+#     return backwards
+#
+#
+# def palindromes(any_string):
+#     return any_string == reverse(any_string)
+#
+#
+# print(palindromes("hot dog"))
+
+
+"""
+Write a function
+that counts how many times a substring occurs in a string.
+"""
+
+# The long way
+
+
+# def find(anystring, substring,  start=0):
+#     return anystring.find(substring, start)
+#
+#
+# def count(anystring, substring):
+#     total = 0
+#     idx = 0
+#     while idx < len(anystring):
+#         current = find(anystring, substring, idx)
+#         if current >= 0:
+#             idx = current + len(substring)
+#             total += 1
+#         else:
+#             break
+#     return total
+#
+#
+# print(count("Mississippi", "issi"))
+
+
+# The right way
+
+#
+# def count(anystring, substring):
+#     return anystring.count(substring)
+#
+# print(count("Mississippi", "issi"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
