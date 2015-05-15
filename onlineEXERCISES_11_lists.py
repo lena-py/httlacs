@@ -31,4 +31,33 @@ print(40 in a)
 print(2 in mixed_list)
 
 
+# ACCESSING ELEMENTS
+print('---ACCESSING ELEMENTS---')
+"""
+use index operator
+"""
+numbers = [4, 'cat', 376, 2*10, 0, -12, len('sgt')]
+print(numbers[2])
+print(numbers[9-8])
+print(numbers[-2])
+print(numbers[len(numbers)-1])
+"""
+successive indices
+"""
+print(numbers[1].upper()[0] + numbers[1][1:])
+
+# CONCATENATION AND REPETITION
+print('---CONACATENATION AND REPETITION---')
+fruit = ['apples', 'bananas', 'guanabanas', 'pears', 'candy']
+print([1, 2] + [3, 4])
+print(fruit + [6, 7, 8, 9])
+
+print([0] * 4)
+print([1, 2, ['hello', 'goodbye']] * 2)
+
+""" id is the unique identifier for objects corresponding to an address in memory"""
+print(id(fruit))
+
+
+
 
