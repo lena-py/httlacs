@@ -96,19 +96,24 @@ print(mylist)
 
 
 # USING LISTS AS PARAMETERS
-print("---USING LISTS AS PARAMETERS---\n"
-      "--- a modifier is a function that takes a list as an arguement and changes the elements ('modifiers and"
+print("---USING LISTS AS PARAMETERS---no longer using itemprint---use debugger instead\n"
+      "--- a modifier is a function that takes a list as an argument and changes the elements ('modifiers and"
       "side effects\n"
       "--- the following function takes a list as an argument and multiplies each element in the list by 2")
 
 
 def multlist(alist):
-    for i in range(len(alist)):
-        alist[i] = alist[i] * 2
+    for idx in range(len(alist)):
+        alist[idx] = alist[idx] * 2
+    return id(alist)
 
-itemprint("def multlist(alist)\n for i in range")
 mylist = [5, 10, 20]
+multlist(mylist)
 print(mylist)
+print("id mylist:", id(mylist), "id alist:", multlist(mylist))
+
+# Conclusion code should be for code
+
 
 
 
