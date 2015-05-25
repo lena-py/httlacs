@@ -88,13 +88,30 @@ for afruit in fruits:
 print('--- since lists are mutable, it is often desirable to traverse a list,\n'
       '--- modifying each of its elements as you go\n'
       '--- the following code squares all the numbers 1 - 5 using iteration by position')
-itemprint("mylist = [1, 2, 3]", "for num in range(len(mylist): \n print(num**2)")
+itemprint("mylist = [1, 2, 3]", "for num in range(len(mylist): \n mylist[num] = mylist[num]**2", "print(mylist)")
 mylist = [1, 2, 3]
 for num in range(len(mylist)):
     mylist[num] = mylist[num]**2
 print(mylist)
 
-the
+
+# USING LISTS AS PARAMETERS
+print("---USING LISTS AS PARAMETERS---\n"
+      "--- a modifier is a function that takes a list as an arguement and changes the elements ('modifiers and"
+      "side effects\n"
+      "--- the following function takes a list as an argument and multiplies each element in the list by 2")
+
+
+def multlist(alist):
+    for i in range(len(alist)):
+        alist[i] = alist[i] * 2
+
+itemprint("def multlist(alist)\n for i in range")
+mylist = [5, 10, 20]
+print(mylist)
+
+
+
 
 
 
