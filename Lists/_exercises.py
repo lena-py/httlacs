@@ -155,7 +155,7 @@ print(sum_evens(currentlist))
 
 ex = "Exercise 09"
 print(ex)
-# Sum up all the even numbers in a list.
+# Sum up all the odd numbers in a list.
 
 
 def sum_odds(lst):
@@ -274,4 +274,29 @@ newlist = currentlist[:]
 newlist.reverse()
 print("reverse:", newlist)
 print("reverse:", reverse_list(currentlist))
+
+
+ex = "Exercise 15"
+print(ex)
+# Write a function replace(s, old, new) that replaces all occurences of old with new in a string s
+
+
+def replace(s, old, new):
+    for i in range((s.count(old))):
+        idx = s.index(old)
+        s = s[:idx] + new + s[idx+len(old):]
+    return s
+
+mystring = "Mississippi"
+print(replace(mystring, "i", "I"))
+
+s = 'I love spom!  Spom is my favorite food.  Spom, spom, spom, yum!'
+print(replace(s, "om", "am"))
+
+s = 'I lave spam!  Spam is my favarite faad.  Spam, spam, spam, yum!'
+print(replace(s, "o", "a"))
+
+
+ex = "Exercise 16"
+
 
