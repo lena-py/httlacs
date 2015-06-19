@@ -6,7 +6,7 @@ list1[1][0] = b'0200'
 print(list1)
 
 # Multiple item assignment
-list1[1][:] = b'0200', b'0100'
+list1[1][:] = b'0300', b'0100'
 list1[0][:3] = list1[1]
 print(list1)
 

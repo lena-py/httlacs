@@ -2,6 +2,7 @@ __author__ = 'lena'
 
 
 def obj_test(vla, vlb):
+    print("{} and {}".format(vla, vlb))
     test1 = str(vla is vlb)
     test2 = str(vla == vlb)
     test3 = str(id(vla) == id(vlb))
