@@ -11,10 +11,13 @@ def obj_test(vla, vlb):
 # String variables with same value reference same object
 obj_test("help", "help")
 
-# Lists with same values do not point to same object
-a = [1, 2, 3]
-b = [1, 2, 3]
+# Lists with same values do not point to same object...
+a = [1, 2, [4, 8], (5, 9)]
+b = [1, 2, [4, 8], (5, 9)]
 obj_test(a, b)
 
-# Integers or strings within a list do point to the same object (they are immutable)
+# ...but their elements do if they are immutable!
 obj_test(a[0], b[0])
+obj_test(a[2], b[2])
+obj_test(a[3], b[3])
+

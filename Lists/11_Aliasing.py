@@ -6,8 +6,13 @@ b = a
 a[0] = 5
 print(b)
 
-# Strings, ints are not aliasable
-a = 1
+# Aliasing a list means both variables reference the same object
+for i in (a, b):
+    print(id(i))
+
+# Immutable types are not aliasable...error results from code below
+a = "hello"
 b = a
-a = 2
+a[:] = a[:1]
 print(b)
+print(a)

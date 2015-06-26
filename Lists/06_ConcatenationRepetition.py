@@ -9,10 +9,14 @@ print(newlist)
 print([0] * 4)
 print([1, 2, ["yes", "no"]] * 2)
 
-copied_list = fruit
+cloned_list = fruit[:]
+aliased_list = fruit
 
-# Concatenation to create new list creates new object
+# Concatenation and the slice operator to create new list creates new object...
+# ...but using assignment operator aliases
 fruit_id = id(fruit)
 newlist_id = id(newlist)
-copied_list_id = id(copied_list)
-print("Fruit's id is {} while newlist's id is {} but copied_list is {}".format(fruit_id, newlist_id, copied_list_id))
+cloned_list_id = id(cloned_list)
+aliased_list_id = id(aliased_list)
+print("Fruit's id is {} while newlist's id is {}. "
+      "Cloned_list's id is {} but aliased_list is {}".format(fruit_id, newlist_id, cloned_list_id, aliased_list_id))
