@@ -17,10 +17,7 @@ fruit['pears'] += 200
 print(fruit)
 print(len(fruit))
 
-'-----------------------------------------------------------------'
-
-# Create a dictionary, add two values together to create a new item
-
+# Add two values together to create a new item
 mydict = {'cat': 12, 'dog': 15}
 mydict['mouse'] = mydict['cat'] + mydict['dog']
 print(mydict)
