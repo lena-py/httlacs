@@ -34,7 +34,7 @@ for item in ("apple", 76):
 print(firstlist)
 
 # Insert the value “cat” at position 3.
-firstlist.insert(3, "cat")
+firstlist.insert(2, "cat")
 print(firstlist)
 
 # Insert the value 99 at the start of the list.
@@ -79,11 +79,12 @@ def createlist():
     return mylist
 
 currentlist = createlist()
-nmrtr = average(currentlist)[0]
-dnmntr = average(currentlist)[1]
-avg = average(currentlist)[2]
+results = average(currentlist)
+nmrtr = results[0]
+dnmntr = results[1]
+avg = results[2]
 
-print("numerator:", nmrtr, "denominator:", dnmntr, "average:", avg)
+print("numerator: {}, denominator: {}, average: {}".format(nmrtr, dnmntr, avg))
 
 
 ex = "Exercise 05"
@@ -282,7 +283,7 @@ print(ex)
 
 
 def replace(s, old, new):
-    for i in range((s.count(old))):
+    for i in range(s.count(old)):
         idx = s.index(old)
         s = s[:idx] + new + s[idx+len(old):]
     return s
@@ -298,5 +299,4 @@ print(replace(s, "o", "a"))
 
 
 ex = "Exercise 16"
-
-
+# Skipped (L-system)
